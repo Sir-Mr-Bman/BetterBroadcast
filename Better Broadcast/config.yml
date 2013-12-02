@@ -1,0 +1,40 @@
+# [===============================================]
+# |        Betterbroadcast, by Sir_Mr_Bman        |
+# |  (C) 2013-14, please see README for details.  |
+# [===============================================]
+# 
+
+# +------------------------------------------------+
+# |                                                |
+# |     C O N F I G U R A T I O N   F I L E        |
+# |                                                |
+# +------------------------------------------------+
+
+# Please make sure you are using valid YAML code before asking about errors.
+
+# Use custom perms
+use-perm: true
+# If this is set to FALSE, then the permissions are:
+#   - betterbcast.say
+
+
+# if use-perm is set to true, ues the following permission:
+pref-perm: 'betterbcast'
+
+
+# Display a message to the user with basic plugin info
+disp-msg: true
+
+# Error message, if the user gets something wrong or does not have permission
+err-prefix: 'BetterBroadcast'
+
+# No permissions message
+no-perm: 'I'm sorry, the server owner hasn't given you permission to do this.'
+
+# Invalid args
+no-args: 'Please include a message to send to the server.'
+
+# The broadcast prefix, we recommend the name of your server.
+bcast-prefix: 'SuperAwesome Craft'
+
+# <-- All done. Thanks for using BetterBroadcast, by Sir_Mr_Bman

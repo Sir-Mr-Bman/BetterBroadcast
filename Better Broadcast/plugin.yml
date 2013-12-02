@@ -1,0 +1,7 @@
+name: AltenSay
+version: 1
+main: me.bman.altensay.AltenSay
+description: A better /say for Alten Craft!
+commands:
+  alten:
+    description: Alten Say!
