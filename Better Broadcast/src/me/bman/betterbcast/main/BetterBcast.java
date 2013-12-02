@@ -23,7 +23,7 @@ public class BetterBcast extends JavaPlugin {
 		PluginDescriptionFile pdfFile = this.getDescription();
 		this.logger.info("[BetterBroadcast] Now loading BetterBroadcast version " + pdfFile.getVersion() + " please wait.");
 		try {
-			plugin.getConfig();
+			this.saveDefaultConfig();
 			this.logger.info("[BetterBroadcast] Finished loading BetterBroadcast");
 			getCommand("bb").setExecutor(new Command_bb());
 		} catch ( Exception e ) {
