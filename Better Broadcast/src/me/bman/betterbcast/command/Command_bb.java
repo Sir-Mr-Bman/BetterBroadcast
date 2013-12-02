@@ -18,7 +18,6 @@ import org.bukkit.command.CommandSender;
 public class Command_bb implements CommandExecutor {
 	// Create instance of plugin and command for reference.
 	public static BetterBcast plugin;
-	
 	// Bukkit's onCommand method
 	public boolean onCommand( CommandSender sender, Command command,
 			String label, String[] args ) {
@@ -50,7 +49,7 @@ public class Command_bb implements CommandExecutor {
 					sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + YamlConfigValues.errPrefix + ChatColor.RED + "] " + ChatColor.GREEN + YamlConfigValues.noPerms);
 				}
 			// What if we arn't using custom permissions?
-			} else if ( YamlConfigValues.customPerm == false ) { 
+			} else { 
 				// Does the user have the normal permission?
 				if ( sender.hasPermission("betterbcast.say")) {
 					// The user has the permission, but forgot to include a message

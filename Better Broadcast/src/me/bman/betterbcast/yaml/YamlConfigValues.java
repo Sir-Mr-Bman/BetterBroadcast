@@ -32,5 +32,4 @@ public class YamlConfigValues {
 	// String: No permissions
 	public static String noPerms = plugin.getConfig().getString("no-perm");
 	
-	
 }

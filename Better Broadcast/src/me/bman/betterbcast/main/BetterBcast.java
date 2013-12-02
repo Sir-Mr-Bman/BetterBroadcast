@@ -17,13 +17,13 @@ public class BetterBcast extends JavaPlugin {
 	public final Logger logger = Logger.getLogger("Minecraft");
 	public static BetterBcast plugin;
 	
-	
 	@Override
 	public void onEnable() {
 		PluginDescriptionFile pdfFile = this.getDescription();
 		this.logger.info("[BetterBroadcast] Now loading BetterBroadcast version " + pdfFile.getVersion() + " please wait.");
 		try {
 			this.saveDefaultConfig();
+			
 			this.logger.info("[BetterBroadcast] Finished loading BetterBroadcast");
 			getCommand("bb").setExecutor(new Command_bb());
 		} catch ( Exception e ) {
