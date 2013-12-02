@@ -1,9 +1,9 @@
 package me.bman.betterbcast.command;
 
-/* [===============================================]
- * |        Betterbroadcast, by Sir_Mr_Bman        |
- * |  (C) 2013-14, please see README for details.  |
- * [===============================================]
+/* [================================================]
+ * |        Better broadcast, by Sir_Mr_Bman        |
+ * |  (C) 2013-14, please see README for details.   |
+ * [================================================]
  */
 
 import me.bman.betterbcast.main.BetterBcast;
@@ -49,9 +49,9 @@ public class Command_bb implements CommandExecutor {
 				} else {
 					sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + YamlConfigValues.errPrefix + ChatColor.RED + "] " + ChatColor.GREEN + YamlConfigValues.noPerms);
 				}
-			// What if we arn't using custom perms?
+			// What if we arn't using custom permissions?
 			} else if ( YamlConfigValues.customPerm == false ) { 
-				// Does the user have the normal perm?
+				// Does the user have the normal permission?
 				if ( sender.hasPermission("betterbcast.say")) {
 					// The user has the permission, but forgot to include a message
 					if(args.length == 0) {

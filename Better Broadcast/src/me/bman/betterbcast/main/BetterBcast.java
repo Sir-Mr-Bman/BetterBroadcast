@@ -1,9 +1,9 @@
 package me.bman.betterbcast.main;
 
-/* [===============================================]
- * |        Betterbroadcast, by Sir_Mr_Bman        |
- * |  (C) 2013-14, please see README for details.  |
- * [===============================================]
+/* [================================================]
+ * |        Better broadcast, by Sir_Mr_Bman        |
+ * |  (C) 2013-14, please see README for details.   |
+ * [================================================]
  */
 
 import java.util.logging.Logger;
