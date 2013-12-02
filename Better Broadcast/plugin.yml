@@ -1,7 +1,7 @@
-name: AltenSay
-version: 1
-main: me.bman.altensay.AltenSay
-description: A better /say for Alten Craft!
+name: Better Broadcast
+version: 0.2
+main: me.bman.betterbcast.main.BetterBcast
+description: A more professional looking broadcast
 commands:
-  alten:
-    description: Alten Say!
+  bb:
+    description: The main command for Better Broadcast

@@ -29,7 +29,7 @@ disp-msg: true
 err-prefix: 'BetterBroadcast'
 
 # No permissions message
-no-perm: 'I'm sorry, the server owner hasn't given you permission to do this.'
+no-perm: 'I am sorry, the server owner has not given you permission to do this.'
 
 # Invalid args
 no-args: 'Please include a message to send to the server.'
