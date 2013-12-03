@@ -22,7 +22,7 @@ public class Command_bb implements CommandExecutor {
 	public boolean onCommand( CommandSender sender, Command command,
 			String label, String[] args ) {
 		// Check to see if the command is sent
-		if ( label.equalsIgnoreCase("bb") ) {
+		if ( command.getName().equalsIgnoreCase("bb") ) {
 			// Find out if we are using custom permissions
 			if ( YamlConfigValues.customPerm == true ) {
 				// If we are using custom permissions... does the user have them?

@@ -13,7 +13,7 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class BetterBcast extends JavaPlugin {
-
+	
 	public final Logger logger = Logger.getLogger("Minecraft");
 	public static BetterBcast plugin;
 	
