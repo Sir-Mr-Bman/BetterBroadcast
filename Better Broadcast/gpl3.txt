@@ -1,0 +1,39 @@
+BetterBroadcast, By Sir_Mr_Bman – Allow users to broadcast messages to a server.
+Copyright (C) 2013-14  Sir_Mr_Bman.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/licenses/gpl.html.
+
+
+THIS SOFTWARE COMES WITH NO WARANTY; USE AT YOUR OWN RISK!!
+
+This file may edit other files in your plugins directory! Please see the below copyright notice for more information
+
+BetterBroacast Copyright (C) 2013-14  Sir_Mr_Bman.
+This program comes with ABSOLUTELY NO WARRANTY; either if hardware OR software is damaged. Use at your own risk!!
+This is free software, and you are welcome to redistribute it under certain conditions; see the section on redistributing below.
+
+
+Redistributing my code is only allowed in certain cases. Those cases are as follows
+	1 – I’m using your code for my own server, and want to change some things.
+	2 – I’m using PARTS of your code to learn how to do something.
+	3 – I’m using PARTS of your code in one of my own plugins.
+You may NOT redistribute my code if…
+	1 – I’m publicly distributing your work, even if I say it’s yours.
+	2 – I’m publicly distributing your work as my own.
+	3 – I’m publicly distributing a modification of your work.
+If you fall under the allowed redistributing restrictions, you MUST
+	1 – Leave a link to my GitHub repo.
+	2 – Copy THIS FILE, along with ALL MY ORIGINAL COPYRIGHTS UNTOUCHED! This means any in file copyrights MAY NOT be changed. You may however append your own.
+
+Feel as though you’ve added something very important? Want to help with development? Just fork the project, and add your code. Then just send me a link (via GitHub or Bukkit) with your repo.
