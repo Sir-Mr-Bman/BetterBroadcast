@@ -11,13 +11,14 @@ import java.util.logging.Logger;
 import me.bman.betterbcast.command.*;
 import me.bman.betterbcast.yaml.YamlCfg;
 
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class BetterBcast extends JavaPlugin {
 	
 	public final Logger logger = Logger.getLogger("Minecraft");
-	public static BetterBcast plugin;
+	public static Plugin plugin;
 	
 	@Override
 	public void onEnable() {
@@ -25,8 +26,7 @@ public class BetterBcast extends JavaPlugin {
 		this.logger.info("[BetterBroadcast] Now loading BetterBroadcast version " + pdfFile.getVersion() + " please wait.");
 		getCommand("bb").setExecutor(new Command_bb());
 		try {
-			YamlCfg.plugin = this;
-			Command_bb.plugin = this;
+			plugin = this;
 			this.saveDefaultConfig();
 			this.logger.info("[BetterBroadcast] Finished loading BetterBroadcast");
 			
@@ -39,8 +39,6 @@ public class BetterBcast extends JavaPlugin {
 	
 	@Override
 	public void onDisable() {
-		YamlCfg.plugin = null;
-		Command_bb.plugin = null;
 		PluginDescriptionFile pdfFile = this.getDescription();
 		this.logger.info("[BetterBroadcast] BetterBroadcast by Sir_Mr_Bman version " + pdfFile.getVersion() + " has been disabled.");
 	}
