@@ -7,7 +7,6 @@ package me.bman.betterbcast.command;
  */
 
 import me.bman.betterbcast.main.BetterBcast;
-import me.bman.betterbcast.yaml.*;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -24,12 +23,12 @@ public class Command_bb implements CommandExecutor {
 		// Check to see if the command is sent
 		if ( command.getName().equalsIgnoreCase("bb") ) {
 			// Find out if we are using custom permissions
-			if ( YamlCfg.customPerm == true ) {
+			if ( plugin.getConfig().getBoolean("use-perm") == true) {
 				// If we are using custom permissions... does the user have them?
-				if ( sender.hasPermission(YamlCfg.prefPerm + ".say") ) {
+				if ( sender.hasPermission(plugin.getConfig().getString("pref-perm") + ".say") ) {
 					// The user has the permission, but forgot to include a message.
 					if(args.length == 0) {
-						sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + YamlCfg.errPrefix + ChatColor.RED + "] " + ChatColor.GREEN + YamlCfg.noArgs);
+						sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + plugin.getConfig().getString("err-prefix") + ChatColor.RED + "] " + ChatColor.GREEN + plugin.getConfig().getString("no-args"));
 					}
 					// The user has the permission, and included the message. This breaks down additional args, and builds the message
 					else if(args.length >= 1) {
@@ -39,14 +38,14 @@ public class Command_bb implements CommandExecutor {
 						}
 						// Send the broadcast to the server
 						String reason = sb.toString().trim();
-						Bukkit.broadcastMessage(ChatColor.RED + "[" + ChatColor.GOLD + YamlCfg.bcastPrefix + ChatColor.RED + "] " + ChatColor.YELLOW + args[0] + " " + reason);
-						if ( YamlCfg.dispMsg == true ) {
-							sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + YamlCfg.errPrefix + ChatColor.RED + "] " + ChatColor.GREEN + "Message sent using Better Broadcast version 0.2 by Sir_Mr_Bman");
+						Bukkit.broadcastMessage(ChatColor.RED + "[" + ChatColor.GOLD + plugin.getConfig().getString("bcast-prefix") + ChatColor.RED + "] " + ChatColor.YELLOW + args[0] + " " + reason);
+						if ( plugin.getConfig().getBoolean("disp-msg") == true ) {
+							sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + plugin.getConfig().getString("err-prefix") + ChatColor.RED + "] " + ChatColor.GREEN + "Message sent using Better Broadcast version 0.2 by Sir_Mr_Bman");
 						}
 					}
 				// Otherwise, the custom permission was not given to the user
 				} else {
-					sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + YamlCfg.errPrefix + ChatColor.RED + "] " + ChatColor.GREEN + YamlCfg.noPerms);
+					sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + plugin.getConfig().getString("err-prefix") + ChatColor.RED + "] " + ChatColor.GREEN + plugin.getConfig().getString("no-perm"));
 				}
 			// What if we arn't using custom permissions?
 			} else { 
@@ -54,7 +53,7 @@ public class Command_bb implements CommandExecutor {
 				if ( sender.hasPermission("betterbcast.say")) {
 					// The user has the permission, but forgot to include a message
 					if(args.length == 0) {
-						sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + YamlCfg.errPrefix + ChatColor.RED + "] " + ChatColor.GREEN + YamlCfg.noArgs);
+						sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + plugin.getConfig().getString("err-prefix") + ChatColor.RED + "] " + ChatColor.GREEN + plugin.getConfig().getString("no-args"));
 					}
 					// The user has the permission, and included the message. This breaks down additional args, and builds the message
 					else if(args.length >= 1) {
@@ -64,14 +63,15 @@ public class Command_bb implements CommandExecutor {
 						}
 						// Send the broadcast to the server
 						String reason = sb.toString().trim();
-						Bukkit.broadcastMessage(ChatColor.RED + "[" + ChatColor.GOLD + YamlCfg.bcastPrefix + ChatColor.RED + "] " + ChatColor.YELLOW + args[0] + " " + reason);
+						Bukkit.broadcastMessage(ChatColor.RED + "[" + ChatColor.GOLD + plugin.getConfig().getString("bcast-prefix") + ChatColor.RED + "] " + ChatColor.YELLOW + args[0] + " " + reason);
 						if ( plugin.getConfig().getBoolean("disp-message") == true ) {
-							sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + YamlCfg.errPrefix + ChatColor.RED + "] " + ChatColor.GREEN + "Message sent using Better Broadcast version 0.2 by Sir_Mr_Bman");
+							sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + plugin.getConfig().getString("err-prefix") + ChatColor.RED + "] " + ChatColor.GREEN + "Message sent using Better Broadcast version 0.2 by Sir_Mr_Bman");
 						}
 					}
 				// Otherwise, the normal permission was not given to the user
 				} else {
-					sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + YamlCfg.errPrefix + ChatColor.RED + "] " + ChatColor.GREEN + YamlCfg.noPerms);
+					sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + plugin.getConfig().getString("err-prefix") + ChatColor.RED + "] " + ChatColor.GREEN + plugin.getConfig().getString("no-perm"));
+					
 				}
 			}
 		}

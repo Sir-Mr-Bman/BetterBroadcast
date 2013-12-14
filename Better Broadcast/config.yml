@@ -19,22 +19,22 @@ use-perm: true
 
 
 # if use-perm is set to true, ues the following permission:
-pref-perm: 'betterbcast'
+pref-perm: betterbcast
 
 
 # Display a message to the user with basic plugin info
 disp-msg: true
 
 # Error message, if the user gets something wrong or does not have permission
-err-prefix: 'BetterBroadcast'
+err-prefix: BetterBroadcast
 
 # No permissions message
-no-perm: 'I am sorry, the server owner has not given you permission to do this.'
+no-perm: I am sorry, the server owner has not given you permission to do this.
 
 # Invalid args
-no-args: 'Please include a message to send to the server.'
+no-args: Please include a message to send to the server.
 
 # The broadcast prefix, we recommend the name of your server.
-bcast-prefix: 'SuperAwesome Craft'
+bcast-prefix: SuperAwesome Craft
 
 # <-- All done. Thanks for using BetterBroadcast, by Sir_Mr_Bman

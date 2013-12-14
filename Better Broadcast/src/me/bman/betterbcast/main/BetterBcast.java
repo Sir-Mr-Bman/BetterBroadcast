@@ -6,10 +6,10 @@ package me.bman.betterbcast.main;
  * [================================================]
  */
 
+import java.io.File;
 import java.util.logging.Logger;
 
 import me.bman.betterbcast.command.*;
-import me.bman.betterbcast.yaml.YamlCfg;
 
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -27,7 +27,13 @@ public class BetterBcast extends JavaPlugin {
 		getCommand("bb").setExecutor(new Command_bb());
 		try {
 			plugin = this;
-			this.saveDefaultConfig();
+			File file = new File(getDataFolder() + File.separator + "config.yml");
+			if ( !file.exists() ) {
+				this.logger.info("[BetterBroadcast] Generating a config file...");
+				this.getConfig().options().copyDefaults(true);
+				this.saveConfig();
+				
+			}
 			this.logger.info("[BetterBroadcast] Finished loading BetterBroadcast");
 			
 		} catch ( Exception e ) {
