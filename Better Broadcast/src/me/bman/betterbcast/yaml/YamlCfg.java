@@ -1,7 +1,11 @@
 package me.bman.betterbcast.yaml;
 import me.bman.betterbcast.main.*;
 public class YamlCfg {
-	public static BetterBcast plugin;
+	
+	private static BetterBcast plugin;
+	public  YamlCfg(BetterBcast plugin) {
+		YamlCfg.plugin = plugin;
+	}
 	// Boolean: use custom permissions
 		public static boolean customPerm = plugin.getConfig().getBoolean("use-perm");
 		
