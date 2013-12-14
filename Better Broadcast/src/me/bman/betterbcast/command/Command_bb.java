@@ -15,7 +15,12 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 public class Command_bb implements CommandExecutor {
-	public static BetterBcast plugin;
+	
+	private BetterBcast plugin;
+	
+	public Command_bb(BetterBcast plugin) {
+		this.plugin = plugin; 
+	}
 	
 	// Bukkit's onCommand method
 	public boolean onCommand( CommandSender sender, Command command,
