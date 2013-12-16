@@ -26,7 +26,6 @@ public class BetterBcast extends JavaPlugin {
 		this.logger.info("[BetterBroadcast] Now loading BetterBroadcast version " + pdfFile.getVersion() + " please wait.");
 		getCommand("bb").setExecutor(new Command_bb(null));
 		try {
-			plugin = this;
 			File file = new File(getDataFolder() + File.separator + "config.yml");
 			if ( !file.exists() ) {
 				this.logger.info("[BetterBroadcast] Generating a config file...");
