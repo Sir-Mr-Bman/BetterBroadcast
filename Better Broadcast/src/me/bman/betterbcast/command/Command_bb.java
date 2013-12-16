@@ -28,7 +28,7 @@ public class Command_bb implements CommandExecutor {
 		// Check to see if the command is sent
 		if ( command.getName().equalsIgnoreCase("bb") ) {
 			// Find out if we are using custom permissions
-			if ( plugin.getConfig().getBoolean("use-perm") == true) {
+			if ( plugin.getConfig().getBoolean("use-perm", true)) {
 				// If we are using custom permissions... does the user have them?
 				if ( sender.hasPermission(plugin.getConfig().getString("pref-perm") + ".say") ) {
 					// The user has the permission, but forgot to include a message.
