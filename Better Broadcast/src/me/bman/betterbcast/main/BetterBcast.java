@@ -11,14 +11,12 @@ import java.util.logging.Logger;
 
 import me.bman.betterbcast.command.*;
 
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class BetterBcast extends JavaPlugin {
 	
 	public final Logger logger = Logger.getLogger("Minecraft");
-	public static Plugin plugin;
 	
 	@Override
 	public void onEnable() {
