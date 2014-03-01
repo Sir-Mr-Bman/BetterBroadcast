@@ -69,7 +69,9 @@ public class Command_bb implements CommandExecutor {
 						}
 						// Send the broadcast to the server
 						String reason = sb.toString().trim();
-						Bukkit.broadcastMessage(ChatColor.RED + "[" + ChatColor.GOLD + plugin.getConfig().getString("bcast-prefix") + ChatColor.RED + "] " + ChatColor.YELLOW + args[0] + " " + reason);
+						String formatted = "" + args[0] + "" + reason;
+						this.format(formatted);
+						Bukkit.broadcastMessage(ChatColor.RED + "[" + ChatColor.GOLD + plugin.getConfig().getString("bcast-prefix") + ChatColor.RED + "] " + ChatColor.YELLOW + formatted);
 						if ( plugin.getConfig().getBoolean("disp-message", true) ) {
 							sender.sendMessage(ChatColor.RED + "[" + ChatColor.BLUE + plugin.getConfig().getString("err-prefix") + ChatColor.RED + "] " + ChatColor.GREEN + "Message sent using Better Broadcast version 0.2 by Sir_Mr_Bman");
 						}
@@ -82,5 +84,9 @@ public class Command_bb implements CommandExecutor {
 			}
 		}
 	return false;
+	}
+	
+	public static String format(String format){
+		return ChatColor.translateAlternateColorCodes('&', format);
 	}
 }
